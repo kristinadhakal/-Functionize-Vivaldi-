@@ -1,4 +1,4 @@
-// Functionize Vivaldi Demo
+ // Functionize Vivaldi Demo
 
 // spring-color: #0E94D1
 // summer-color: #1BA848
@@ -20,29 +20,25 @@ function seasonSelectChanged() {
   let season = seasonSelect.value;
 
   // Update page to match selected season
-  if (season === "spring") {
-    seasonH2.innerHTML = "spring";
-    seasonH2.style.color = "#0E94D1";
-    seasonImg.src = "img/spring.jpg";
-    seasonAudio.src = "songs/vivaldi-spring.mp3";
-    document.body.style.backgroundColor = "#0E94D1";
-  } else if (season === "summer") {
-    seasonH2.innerHTML = "summer";
-    seasonH2.style.color = "#1BA848";
-    seasonImg.src = "img/summer.jpg";
-    seasonAudio.src = "songs/vivaldi-summer.mp3";
-    document.body.style.backgroundColor = "#1BA848";
-  } else if (season === "autumn") {
-    seasonH2.innerHTML = "autumn";
-    seasonH2.style.color = "#FE6732";
-    seasonImg.src = "img/autumn.jpg";
-    seasonAudio.src = "songs/vivaldi-autumn.mp3";
-    document.body.style.backgroundColor = "#FE6732";
-  } else if (season === "winter") {
-    seasonH2.innerHTML = "winter";
-    seasonH2.style.color = "#1C64B9";
-    seasonImg.src = "img/winter.jpg";
-    seasonAudio.src = "songs/vivaldi-winter.mp3";
-    document.body.style.backgroundColor = "#1C64B9";
+  if (season === 'spring') {
+    setSeason("spring",'0E94D1' );
+  
+  } else if (season === 'summer') {
+    setSeason("summer", '1BA848');
+
+  } else if (season === 'autumn') {
+    setSeason("autumn",'FE6732');
+
+  } else if (season === 'winter') {
+    setSeason("winter", '1C64B9');
   }
+}
+
+function setSeason (seasonName, seasonColour) {
+  seasonH2.innerHTML = seasonName;
+  seasonH2.style.color = seasonColour;
+  seasonImg.src = 'img/${seasonName}.jpg';;
+  seasonAudio.src = 'songs/vivaldi-${seasonName}.mp3';
+  document.body.style.backgroundColor = "#seasonColour"; 
+
 }
