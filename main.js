@@ -37,8 +37,8 @@ function seasonSelectChanged() {
 function setSeason (seasonName, seasonColour) {
   seasonH2.innerHTML = seasonName;
   seasonH2.style.color = seasonColour;
-  seasonImg.src = 'img/${seasonName}.jpg';;
-  seasonAudio.src = 'songs/vivaldi-${seasonName}.mp3';
-  document.body.style.backgroundColor = "#seasonColour"; 
+  seasonImg.src = `img/${seasonName}.jpg`;
+  seasonAudio.src = `songs/vivaldi-${seasonName}.mp3`;
+  document.body.style.backgroundColor = seasonColour; 
 
 }
